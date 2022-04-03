@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class project {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+
+        int n, r;
+        int total = 1;
+        int toplam = 1;
+        int komb;
+        int kom = 1;
+        System.out.print("Eleman sayisini giriniz :");
+        n = inp.nextInt();
+        System.out.print("Grup sayisini giriniz");
+        r = inp.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+
+            total = total * i;
+        }
+
+        for (int l = 1; l <= r; l++) {
+            toplam = toplam * l;
+        }
+        for (int k =1; k<= (n-r);k++){
+            kom= kom*k;
+        }
+   komb= total/(toplam* kom);
+        System.out.print("Sonuc"+komb);
+    }
+}
